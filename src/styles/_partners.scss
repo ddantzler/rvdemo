@@ -1,0 +1,26 @@
+.partners {
+  grid-area: partners;
+  background-color: $color-darkBlue;
+  padding: 0.5em 5%;
+  font-size: 0.8em;
+  text-align: right;
+  color: white;
+  a {
+    color: white;
+    margin-left: 2em;
+  };
+  @media (max-width: $bp-phone) {
+    background-color: $color-lightBlue;
+    padding-top: 1em;
+    padding-bottom: 0px;
+    text-align: center;
+    a {
+      margin-left: 0;
+      padding-right: 1em;
+      padding-left: 1em;
+      &:first-child {
+        border-right: solid 1px #fff;
+      }
+    } 
+  }
+}

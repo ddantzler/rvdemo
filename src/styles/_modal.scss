@@ -1,0 +1,163 @@
+.modal-wrapper {
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+  display: block;
+  position: fixed;
+  overflow: auto;
+}
+.modal {
+  background-color: white;
+  display: block;
+  width: 480px;
+  margin: 2em auto;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+  @media (max-width: $bp-phone){
+    width: 90%;
+  }
+  .modal-header {
+    background-color: $color-darkBlue;
+    color: #fff;
+    padding: 1.5em 1em;
+    position: relative;
+    h2 {
+      margin: 0;
+    }
+    .modal-type {
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+    .modal-close {
+      font-family: "SSPika";
+      font-size: 1.25em;
+      display: block;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+      color: white;  
+      outline: none;
+      border: none;
+      background-color: $color-darkBlue;
+    }
+  }
+  .modal-body {
+    padding: 1em;
+    p {
+      margin-bottom: 1em;
+    }
+    fieldset {
+      border: 0;
+      padding: 1em;
+      background-color: $color-lightGrey;
+      display: block;
+      @media (max-width: $bp-phone) {
+        background-color: white;
+        padding: 0;
+      }
+    }
+    label {
+      width: 100%;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+    .form-label{
+      display: flex;
+    }
+    .invalid {
+      background-image: url("../assets/images/circle-form.png");
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      background-size: 100%;
+    }
+    .valid {
+      background-image: url("../assets/images/checkmark-circle.png");
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      background-size: 100%;
+    }
+    input {
+      padding: 0;
+      font-size: 1em;
+      border: 0;
+      background-color: #fff;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      border: 0;
+      padding: 0;
+      font-size: 1em;
+      background-color: #fff;
+      &:focus {
+        outline: none;
+      }
+    }
+    .form-input {
+      border: 1px solid $color-darkGrey;
+      display: block;
+      padding: 0.5em;
+      background-color: #fff;
+      margin-bottom: 1em;
+    }
+    %radio, .radio-inactive {
+      background-color: $color-lightGrey;
+      border: 1px solid $color-darkGrey;
+      border-radius: 2px;
+      font-size: 1em;
+      width: 60px;
+      padding: 0.5em;
+      margin-right: 0.5em;
+    }
+    .radio-active {
+      @extend %radio;
+      background-color: $color-altBlue;
+      color: white;
+    }
+    hr {
+      border: 0;
+      margin: 1.5em 0;
+      border-top: 1px solid $color-mediumerGrey;
+    }
+    .form-send {
+      text-align: center;
+      &:after {
+        font-family: "SSPika";
+        vertical-align: middle;
+        display: inline-block;
+        content: "navigateright";
+        color: $color-altBlue;
+      }
+      button {
+        background: none;
+        border: 0;
+        font-size: 1em;
+        font-weight: bold;
+      }
+      @media (max-width: $bp-phone) {
+        text-align: right;
+        button {
+          color: $color-darkGrey;
+        }
+        &:after {
+          content: ""
+        }
+      }
+    }
+  }
+  .modal-footer {
+    padding: 2em;
+    background-color: $color-lightGrey;
+    font-size: 0.8em;
+    @media (max-width: $bp-phone){
+      display: none;
+    }
+  }
+}

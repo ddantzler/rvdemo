@@ -1,0 +1,58 @@
+.footer {
+  grid-area: footer;
+  padding: 1.5em 5%;
+  background-color: $color-darkBlue;
+  color: white;
+  display: grid;
+  grid-template-areas:
+    "footer-logo"
+    "footer-social";
+  
+  &-logo {
+    grid-area: footer-logo;
+    text-align: center;
+    margin-bottom: 1em;
+    img {
+      height: 25px;
+    }
+  }
+  &-social {
+    grid-area: footer-social;
+    text-align: center;
+    font-weight: bold;
+    a {
+      margin-left: 1em;
+    };
+    img {
+      height: 16px;
+    }
+  }
+}
+
+.copyright {
+  grid-area: copyright;
+  font-size: 0.8em;
+  background-color: $color-lightBlue;
+  padding: 0.5em 5%;
+  text-align: center;
+  color: white;
+  a {
+    color: white;
+  }
+  hr {
+    display: none;
+  }
+  @media (max-width: $bp-tablet) {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+  }
+  @media (max-width: $bp-phone) {
+    hr {
+      display: block;
+      margin: 0;
+      margin-bottom: 0.5em;
+      border: 0;
+      border-top: 1px solid #fff;
+    }
+  }
+}

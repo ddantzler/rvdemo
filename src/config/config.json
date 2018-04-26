@@ -1,0 +1,42 @@
+{
+  "nav": [
+    {
+      "desc": "Pools & Spas",
+      "href": "/"
+    },
+    {
+      "desc": "Supplies",
+      "href": "/"
+    },
+    {
+      "desc": "Resources",
+      "href": "/"
+    },
+    {
+      "desc": "Services",
+      "href": "/"
+    }
+  ],
+  "partners": [
+    {
+      "desc": "Dealers and Distributers",
+      "href": "/",
+      "icon": ""
+    },
+    {
+      "desc": "Commercial Service",
+      "href": "/",
+      "icon": "icon-action-after"
+    }
+  ],
+  "copyright": [
+    {
+      "desc": "Privacy Policy",
+      "href": "/"
+    }, 
+    {
+      "desc": "Terms & Conditions",
+      "href": "/"
+    }
+  ]
+}

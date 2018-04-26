@@ -1,0 +1,18 @@
+$icon-list: "email" "location" "action" "star" "home" "users" "settings" "phone" "dropdown";
+
+@each $icon in $icon-list {
+  .icon-#{$icon}-before::before, .icon-#{$icon}-after::after {
+    font-family: "SSPika";
+    vertical-align: middle;
+    display: inline-block;
+    content: $icon;
+  }
+
+  .icon-#{$icon}-before::before {
+    margin-right: 0.5em;
+  }
+
+  .icon-#{$icon}-after::after {
+    margin-left: 0.5em;
+  }
+}

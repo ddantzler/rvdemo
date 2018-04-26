@@ -1,0 +1,42 @@
+body {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  color: $color-copyGrey;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a {
+  color: $color-darkBlue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 0.8em;
+  font-style: italic;
+  font-weight: 400; 
+}

@@ -1,0 +1,195 @@
+.filter {
+  grid-area: filter;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "status options";
+  margin-top: 9em;
+  background-color: $color-lightGrey;
+  border-radius: 10px;
+  padding: 12px;
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 2fr
+  }
+  @media (max-width: $bp-phone) {
+    grid-template-columns: 1fr 200px;
+    border-radius: 0;
+    border-bottom: solid 1px $color-mediumerGrey;
+    grid-template-areas:
+      "status button"
+      "options options";
+  }
+
+  .status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1em;
+    grid-area: status;
+    color: $color-lightBlue;
+    font-weight: bold;
+    border-right: 2px solid $color-mediumGrey;
+    padding: 24px;
+    white-space: nowrap;
+    @media (max-width: $bp-tablet) {
+      padding: 12px;
+    }
+    @media (max-width: $bp-phone) {
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: initial;
+      padding: 12px 0;
+      border-right: none;
+    }
+  }
+
+  .options-button {
+    grid-area: button;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2em;
+    padding-left: 1em;
+    border: solid 1px $color-mediumerGrey;
+    margin-bottom: -1px;
+    font-weight: bold;
+    .icon-dropdown {
+      display: inline-block;
+      background-color: $color-lightGrey;
+      margin-left: 2em;
+      padding: 14px 0;
+      padding-left: 8px;
+      font-size: 0.8em;
+      width: 33px;
+      border-left: 1px solid $color-mediumerGrey;
+    }
+    @media (min-width: $bp-phone){
+      display: none
+    }
+    &:hover {
+      background-color: $color-mediumGrey;
+      .icon-dropdown {
+        background-color: $color-darkGrey;
+      }
+    }
+  }
+
+  .options {
+    display: grid;
+    grid-area: options;
+    grid-template-columns: repeat(5, 1fr);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 24px;
+    white-space: nowrap;
+    .title {
+      white-space: nowrap;
+      margin-right: 1em;
+    }
+    @media (max-width: $bp-tablet) {
+      text-align: center;
+      padding: 12px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 8px;
+      .title {
+        grid-row-start: 1;
+        grid-column: 1 / 5;
+        // display: flex;
+      }
+      .checkbox {
+        text-align: left;
+      }
+    }
+    @media (max-width: $bp-phone) {
+      text-align: left;
+      .title {
+        display: none;
+      }
+      grid-template-columns: 1fr;
+      background-color: #fff;
+      border: solid 1px $color-mediumerGrey;
+      padding: 16px;
+      grid-gap: 32px;
+      font-size: 1.5em;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      background-color: $color-mediumerGrey;
+      padding: 0 0.5em;
+      text-align: center;
+      border-radius: 2px;
+      font-weight: bold;
+      font-size: 0.8em;
+      border: solid 1px $color-darkGrey;
+      &:hover {
+        .tooltip-text {
+          visibility: visible;
+        }
+      }
+    }
+    .tooltip-text {
+      visibility: hidden;
+      position: absolute;
+      border: 1px solid $color-darkGrey;
+      border-radius: 2px;
+      padding: 0 0.5em;
+      background-color: palegoldenrod;
+      top: 100%;
+      left: 0%;
+      margin-top: 0.25em;
+      margin-left: -20px;
+    }
+    label {
+      font-size: 0.8em;
+      font-weight: normal;
+      margin-right: 1em;
+    }
+    .checkbox {
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"] + label::after {
+        content: none;
+      }
+      input[type="checkbox"]:checked + label::after {
+        content: "";
+      }
+      label {
+        position: relative;
+        display: inline-block;
+        padding-left: 22px;
+        cursor: pointer;
+        &:before, &:after {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          cursor: pointer;
+          background-color: #fff;
+          border-radius: 4px;
+          left: 0px;
+          top: -2px;
+        }
+        @media (max-width: $bp-phone){
+          padding-left: 1.75em;
+          &:before, &:after {
+            top: 2px;
+          }
+        }
+        &:before {
+          height: 16px;
+          width: 16px;
+          border: 1px solid $color-mediumGrey;
+        }
+        &:after {
+          height: 6px;
+          width: 6px;
+          border: 6px solid $color-lightBlue;
+        }
+      }
+    }
+  }
+}
