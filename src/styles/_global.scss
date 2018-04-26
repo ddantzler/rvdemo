@@ -40,3 +40,29 @@ h4 {
   font-style: italic;
   font-weight: 400; 
 }
+
+.hidden-phone {
+  @media (max-width: $bp-phone) {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @media (max-width: $bp-tablet) {
+    display: none !important;
+  }
+}
+
+.visible-phone {
+  display: none;
+  @media (max-width: $bp-phone) {
+    display: initial !important;
+  }
+}
+
+.visible-tablet {
+  display: none;
+  @media (max-width: $bp-tablet) {
+    display: initial !important;
+  }
+}

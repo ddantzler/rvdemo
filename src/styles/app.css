@@ -734,13 +734,6 @@
       .modal .modal-footer {
         display: none; } }
 
-.wrapper {
-  display: grid;
-  grid-template-areas: "partners" "nav" "content" "footer" "copyright"; }
-  @media (max-width: 767px) {
-    .wrapper {
-      grid-template-areas: "nav" "content" "footer" "partners" "copyright"; } }
-
 .menu-icon {
   display: none;
   position: fixed;
@@ -805,6 +798,13 @@
       right: 1.5em;
       color: #21C7C5; }
 
+.wrapper {
+  display: grid;
+  grid-template-areas: "partners" "nav" "content" "footer" "copyright"; }
+  @media (max-width: 767px) {
+    .wrapper {
+      grid-template-areas: "nav" "content" "footer" "partners" "copyright"; } }
+
 .content {
   background: url("../assets/images/water-image.png") no-repeat center -10px;
   display: grid;
@@ -813,26 +813,6 @@
   @media (max-width: 767px) {
     .content {
       padding: 0; } }
-
-@media (max-width: 767px) {
-  .hidden-phone {
-    display: none !important; } }
-
-@media (max-width: 991px) {
-  .hidden-tablet {
-    display: none !important; } }
-
-.visible-phone {
-  display: none; }
-  @media (max-width: 767px) {
-    .visible-phone {
-      display: initial !important; } }
-
-.visible-tablet {
-  display: none; }
-  @media (max-width: 991px) {
-    .visible-tablet {
-      display: initial !important; } }
 
 body {
   font-family: 'Open Sans';
@@ -866,3 +846,23 @@ h4 {
   font-size: 0.8em;
   font-style: italic;
   font-weight: 400; }
+
+@media (max-width: 767px) {
+  .hidden-phone {
+    display: none !important; } }
+
+@media (max-width: 991px) {
+  .hidden-tablet {
+    display: none !important; } }
+
+.visible-phone {
+  display: none; }
+  @media (max-width: 767px) {
+    .visible-phone {
+      display: initial !important; } }
+
+.visible-tablet {
+  display: none; }
+  @media (max-width: 991px) {
+    .visible-tablet {
+      display: initial !important; } }
